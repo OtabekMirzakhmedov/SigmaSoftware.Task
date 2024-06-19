@@ -1,0 +1,6 @@
+@SigmaSoftware.Task.CandidateApi_HostAddress = http://localhost:5198
+
+GET {{SigmaSoftware.Task.CandidateApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
