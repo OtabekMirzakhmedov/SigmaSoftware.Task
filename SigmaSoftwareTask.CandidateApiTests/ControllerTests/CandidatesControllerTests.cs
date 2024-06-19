@@ -35,7 +35,6 @@ namespace SigmaSoftwareTask.CandidateApiTests.ControllerTests
         [Fact]
         public async Task AddOrUpdateCandidateAsync_ValidCandidateDto_ReturnsOkResult()
         {
-            // Arrange
             var mockCandidateService = new Mock<ICandidateService>();
             var mockCandidateMapper = new Mock<ICandidateMapper>();
             var controller = new CandidatesController(mockCandidateService.Object, mockCandidateMapper.Object);
@@ -47,10 +46,8 @@ namespace SigmaSoftwareTask.CandidateApiTests.ControllerTests
                 FreeTextComment = "Test comment"
             };
 
-            // Act
             var result = await controller.AddOrUpdateCandidateAsync(candidateDto);
 
-            // Assert
             var okResult = Assert.IsType<OkResult>(result);
             mockCandidateService.Verify(service => service.AddOrUpdateCandidateAsync(It.IsAny<Candidate>()), Times.Once);
         }
