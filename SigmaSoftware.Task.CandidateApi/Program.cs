@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using SigmaSoftwareTask.CandidateApi.Data;
+using SigmaSoftwareTask.CandidateApi.Mappers;
+using SigmaSoftwareTask.CandidateApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +10,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("TaskConnection")));
+
+builder.Services.AddScoped<ICandidateService, CandidateService>();
+builder.Services.AddScoped<ICandidateMapper, CandidateMapper>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
