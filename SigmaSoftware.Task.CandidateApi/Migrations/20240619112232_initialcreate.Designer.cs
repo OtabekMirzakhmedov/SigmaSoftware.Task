@@ -12,7 +12,7 @@ using SigmaSoftwareTask.CandidateApi.Data;
 namespace SigmaSoftwareTask.CandidateApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240619103016_initialcreate")]
+    [Migration("20240619112232_initialcreate")]
     partial class initialcreate
     {
         /// <inheritdoc />
@@ -32,7 +32,6 @@ namespace SigmaSoftwareTask.CandidateApi.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("CallTimeInterval")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
@@ -52,7 +51,6 @@ namespace SigmaSoftwareTask.CandidateApi.Migrations
                         .HasColumnType("nvarchar(1000)");
 
                     b.Property<string>("GitHubUrl")
-                        .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
@@ -62,12 +60,10 @@ namespace SigmaSoftwareTask.CandidateApi.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("LinkedInUrl")
-                        .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
                     b.Property<string>("PhoneNumber")
-                        .IsRequired()
                         .HasMaxLength(15)
                         .HasColumnType("nvarchar(15)");
 

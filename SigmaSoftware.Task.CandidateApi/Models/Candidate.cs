@@ -17,7 +17,7 @@ namespace SigmaSoftwareTask.CandidateApi.Models
 
         [Phone]
         [StringLength(15)]
-        public string PhoneNumber { get; set; } = string.Empty;
+        public string? PhoneNumber { get; set; }
 
         [Required]
         [EmailAddress]
@@ -25,15 +25,15 @@ namespace SigmaSoftwareTask.CandidateApi.Models
         public string Email { get; set; } = string.Empty;
 
         [StringLength(100)]
-        public string CallTimeInterval { get; set; } = string.Empty;
+        public string? CallTimeInterval { get; set; }
 
         [Url]
         [StringLength(200)]
-        public string LinkedInUrl { get; set; } = string.Empty;
+        public string? LinkedInUrl { get; set; }
 
         [Url]
         [StringLength(200)]
-        public string GitHubUrl { get; set; } = string.Empty;
+        public string? GitHubUrl { get; set; }
 
         [Required]
         [StringLength(1000)]
