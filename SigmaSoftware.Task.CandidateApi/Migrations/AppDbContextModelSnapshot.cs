@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using SigmaSoftware.Task.CandidateApi.Data;
+using SigmaSoftwareTask.CandidateApi.Data;
 
 #nullable disable
 
@@ -22,7 +22,7 @@ namespace SigmaSoftwareTask.CandidateApi.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("SigmaSoftware.Task.CandidateApi.Models.Candidate", b =>
+            modelBuilder.Entity("SigmaSoftwareTask.CandidateApi.Models.Candidate", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()

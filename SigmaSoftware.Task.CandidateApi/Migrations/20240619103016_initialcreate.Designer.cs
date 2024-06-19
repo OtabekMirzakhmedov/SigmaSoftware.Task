@@ -5,15 +5,15 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using SigmaSoftware.Task.CandidateApi.Data;
+using SigmaSoftwareTask.CandidateApi.Data;
 
 #nullable disable
 
-namespace SigmaSoftware.Task.CandidateApi.Migrations
+namespace SigmaSoftwareTask.CandidateApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240619072956_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20240619103016_initialcreate")]
+    partial class initialcreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,7 +25,7 @@ namespace SigmaSoftware.Task.CandidateApi.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("SigmaSoftware.Task.CandidateApi.Models.Candidate", b =>
+            modelBuilder.Entity("SigmaSoftwareTask.CandidateApi.Models.Candidate", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
