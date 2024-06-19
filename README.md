@@ -13,4 +13,4 @@
   * Assumed that Swagger was used for API documentation.
   * Assumed the application is deployed on a Windows environment due to the use of localdb.
 
-less than 8 hours is spent on the task 
+### less than 8 hours is spent on the task 
