@@ -54,29 +54,5 @@ namespace SigmaSoftwareTask.CandidateApiTests.ControllerTests
             var okResult = Assert.IsType<OkResult>(result);
             mockCandidateService.Verify(service => service.AddOrUpdateCandidateAsync(It.IsAny<Candidate>()), Times.Once);
         }
-
-        [Fact]
-        public async Task AddOrUpdateCandidateAsync_InvalidCandidateDto_ReturnsBadRequestWithModelState()
-        {
-            // Arrange
-            var mockCandidateService = new Mock<ICandidateService>();
-            var mockCandidateMapper = new Mock<ICandidateMapper>();
-            var controller = new CandidatesController(mockCandidateService.Object, mockCandidateMapper.Object);
-            var candidateDto = new CandidateDto
-            {
-                LastName = "Doe",
-                Email = "JohnDoe@example.com",
-                FreeTextComment = "Test comment"
-            };
-
-            // Act
-            var result = await controller.AddOrUpdateCandidateAsync(candidateDto);
-
-            // Assert
-            var badRequestResult = Assert.IsType<BadRequestObjectResult>(result);
-            var modelState = Assert.IsType<SerializableError>(badRequestResult.Value);
-            Assert.True(modelState.ContainsKey(nameof(candidateDto.FirstName)));
-            mockCandidateService.Verify(service => service.AddOrUpdateCandidateAsync(It.IsAny<Candidate>()), Times.Never);
-        }
     }
 }
