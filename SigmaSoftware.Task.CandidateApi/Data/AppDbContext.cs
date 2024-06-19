@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SigmaSoftware.Task.CandidateApi.Models;
+using SigmaSoftwareTask.CandidateApi.Models;
 
-namespace SigmaSoftware.Task.CandidateApi.Data
+namespace SigmaSoftwareTask.CandidateApi.Data
 {
     public class AppDbContext : DbContext
     {

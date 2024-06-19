@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace SigmaSoftware.Task.CandidateApi.Controllers
+namespace SigmaSoftwareTask.CandidateApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]

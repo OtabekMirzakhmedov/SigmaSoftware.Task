@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using SigmaSoftware.Task.CandidateApi.Data;
+using SigmaSoftwareTask.CandidateApi.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

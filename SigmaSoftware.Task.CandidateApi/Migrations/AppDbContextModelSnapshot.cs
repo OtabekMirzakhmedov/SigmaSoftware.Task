@@ -8,7 +8,7 @@ using SigmaSoftware.Task.CandidateApi.Data;
 
 #nullable disable
 
-namespace SigmaSoftware.Task.CandidateApi.Migrations
+namespace SigmaSoftwareTask.CandidateApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     partial class AppDbContextModelSnapshot : ModelSnapshot

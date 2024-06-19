@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace SigmaSoftware.Task.CandidateApi.Models
+namespace SigmaSoftwareTask.CandidateApi.Models
 {
     public class Candidate
     {

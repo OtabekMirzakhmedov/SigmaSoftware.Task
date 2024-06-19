@@ -1,4 +1,4 @@
-namespace SigmaSoftware.Task.CandidateApi
+namespace SigmaSoftwareTask.CandidateApi
 {
     public class WeatherForecast
     {
